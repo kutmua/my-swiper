@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Swiper</title>
+  <!-- fonts -->
+  <link rel="preload" href="fonts/Roboto.woff2" as="font">
+  <link rel="preload" href="fonts/Roboto.woff" as="font">
+  <link rel="preload" href="fonts/Robotobold.woff2" as="font">
+  <link rel="preload" href="fonts/Robotobold.woff" as="font">
+
+  <!-- main styles -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <main>
+    <section class="tz-section">
+      <div class="container tz-container tz">
+        <div class="top-content flex">
+          <h1 class="tz__title title-h1">Актуальное</h1>
+
+          <div class="navbar navbar-container flex">
+            <div class="navbar__indicator">
+              <span class="navbar__indicator-marker"></span>
+            </div>
+
+            <div class="navbar__btns-container flex">
+              <button class="navbar__btn btn-reset btn-prev">
+                <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="-0.5" y="0.5" width="59" height="59" transform="matrix(-1 0 0 1 59 0)" stroke="#C8D9FB"/>
+                  <path d="M35 20L25 30L35 40" stroke="#527CCD"/>
+                </svg>                  
+              </button>
+
+              <button class="navbar__btn btn-reset btn-next">
+                <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.5" y="0.5" width="59" height="59" stroke="#C8D9FB"/>
+                  <path d="M25 20L35 30L25 40" stroke="#527CCD"/>
+                </svg>  
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="my-swiper">
+          <div class="my-swiper__line">
+
+            <div class="my-swiper__slide slide">
+              <div class="card flex">
+                <div class="img"></div>
+                <span class="card__date">10.11.2020&nbsp;г.</span>
+                <p class="card__title">
+                  Ким и&nbsp;Валерия Брейтбурги написали книгу про искусство
+                </p>
+                <p class="card__descr">Работа над книгой велась более пяти лет, и&nbsp;действенные методики, описанные в&nbsp;ней, созданные в&nbsp;результате анализа и&nbsp;синтеза идей...</p>
+              </div>
+            </div>
+
+            <div class="my-swiper__slide slide">
+              <div class="card flex">
+                <div class="img"></div>
+                <span class="card__date">10.11.2020&nbsp;г.</span>
+                <p class="card__title">Юрий Колокольников пытается спасти Землю в&nbsp;клипе &laquo;Космические силы&raquo;</p>
+                <p class="card__descr">Премьера клипа &laquo;Космические силы&raquo; группы &laquo;Мумий Тролль&raquo; состоялась 6&nbsp;ноября 2020&nbsp;года.</p>
+              </div>
+            </div>
+
+            <div class="my-swiper__slide slide">
+              <div class="card flex">
+                <div class="img"></div>
+                <span class="card__date">10.11.2020&nbsp;г.</span>
+                <p class="card__title">BTS получили четыре награды MTV EMA</p>
+                <p class="card__descr">BTS получили четыре награды MTV EMA
+                  27-я ежегодная церемония награждения MTV Europe Music Awards состоялась 8&nbsp;ноября 2020&nbsp;г.</p>
+              </div>
+            </div>
+
+            <div class="my-swiper__slide slide">
+              <div class="card flex">
+                <div class="img"></div>
+                <span class="card__date">10.11.2020&nbsp;г.</span>
+                <p class="card__title">Открытие сезона &laquo;Ла&nbsp;Скала&raquo; отменено</p>
+                <p class="card__descr">Миланский театр La Scala отменил открытие сезона. Первый спектакль был назначен на 7 декабря — «Лючия ди Ламмермур». </p>
+              </div>
+            </div>
+
+            <!-- для примера свайпера -->
+            <div class="my-swiper__slide slide">
+              <div class="card flex">
+                <div class="img"></div>
+                <span class="card__date">10.11.2020&nbsp;г.</span>
+                <p class="card__title">Открытие сезона &laquo;Ла&nbsp;Скала&raquo; отменено</p>
+                <p class="card__descr">Миланский театр La Scala отменил открытие сезона. Первый спектакль был назначен на 7 декабря — «Лючия ди Ламмермур». </p>
+              </div>
+            </div>
+
+            <div class="my-swiper__slide slide">
+              <div class="card flex">
+                <div class="img"></div>
+                <span class="card__date">10.11.2020&nbsp;г.</span>
+                <p class="card__title">Открытие сезона &laquo;Ла&nbsp;Скала&raquo; отменено</p>
+                <p class="card__descr">Миланский театр La Scala отменил открытие сезона. Первый спектакль был назначен на 7 декабря — «Лючия ди Ламмермур». </p>
+              </div>
+            </div>
+
+            <div class="my-swiper__slide slide">
+              <div class="card flex">
+                <div class="img"></div>
+                <span class="card__date">10.11.2020&nbsp;г.</span>
+                <p class="card__title">Открытие сезона &laquo;Ла&nbsp;Скала&raquo; отменено</p>
+                <p class="card__descr">Миланский театр La Scala отменил открытие сезона. Первый спектакль был назначен на 7 декабря — «Лючия ди Ламмермур». </p>
+              </div>
+            </div>
+
+            <div class="my-swiper__slide slide">
+              <div class="card flex">
+                <div class="img"></div>
+                <span class="card__date">10.11.2020&nbsp;г.</span>
+                <p class="card__title">Открытие сезона &laquo;Ла&nbsp;Скала&raquo; отменено</p>
+                <p class="card__descr">Миланский театр La Scala отменил открытие сезона. Первый спектакль был назначен на 7 декабря — «Лючия ди Ламмермур». </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <script src="js/main.js"></script>
+</body>
+</html>

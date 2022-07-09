@@ -1,0 +1,275 @@
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto'), local('Roboto-Regular'), 
+    url('../fonts/Roboto.woff2') format('woff2'), 
+    url('../fonts/Roboto.woff') format('woff');
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto Bold'), local('Roboto-Bold'), 
+  url('../fonts/Robotobold.woff2') format('woff2'), 
+  url('../fonts/Robotobold.woff') format('woff');
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* ОБНУЛЕНИЕ */
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*::before,
+*::after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+ul li {
+  list-style: none;
+}
+/* ------------------------------ */
+
+/* GLOBAL */
+.hide {
+  display: none;
+}
+.hover {
+  border: 1px solid red;
+}
+/* colors */
+$color_1: #527CCD;
+$color_2: #C8D9FB;
+$color_marker_indicator: #527CCD;
+$color_slide_active: #527CCD;
+
+body{
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1190px;
+}
+
+.flex {
+  display: flex;
+}
+
+.btn-reset {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.tz-container {
+  padding-top: 120px;
+  padding-bottom: 160px;
+}
+
+.top-content {
+  margin-bottom: 40px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  .title-h1 {
+    margin-right: 10px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 60px;
+    color: $color_1;
+  }
+  .navbar-container {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 560px;
+    width: 100%;
+    .navbar__indicator {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-right: 10px;
+      width: 100%;
+      max-width: 360px;
+      height: 1px;
+      background-color: $color_2;
+        .navbar__indicator-marker {
+        position: absolute;
+        height: 1px;
+        background-color: $color_marker_indicator;
+        transition: transform ease .4s, height linear .1s;
+        cursor: pointer;
+        &:hover {
+          height: 7px;
+          cursor: pointer;
+        }
+        &:active {
+          height: 7px;
+          cursor: pointer;
+        }
+      }
+    }
+    .navbar__btn {
+      width: 60px;
+      height: 60px;
+      svg {
+        fill: transparent;
+        transition: fill ease .2s;
+      }
+      &:hover svg{
+        fill: #CCDDFF;
+      }
+      &:focus-visible {
+        outline: 2px solid $color_1;
+      }
+    }
+    .btn-prev {
+      margin-right: 40px;
+    }
+  }
+}
+
+.my-swiper {
+  width: 100%;
+  overflow: hidden;
+  .my-swiper__line {
+    display: flex;
+    flex-grow: 1;
+    align-items: stretch;
+    transition: transform ease .4s;
+    .my-swiper__slide .card.selected {
+      box-shadow: 4px 4px 23px 2px rgba(200, 217, 251, 0.5);
+      transition: box-shadow linear .2s;
+    }
+    .card {
+      padding: 20px 18px 22px 19px;
+      height: 100%;
+      flex-direction: column;
+      border: 1px solid $color_2;
+      transition: border ease .4s;
+      cursor: move;
+      &.next-card {
+        border: 1px solid greenyellow;
+      }
+      .img {
+        margin-bottom: 10px;
+        width: 100%;
+        height: 160px;
+        background-image: url(../img/photo.jpg);
+        background-position: center;
+        background-size: cover;
+        object-fit: cover;
+        pointer-events: none;
+      }
+      .card__date {
+        margin-bottom: 10px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 22px;
+        color: $color_marker_indicator;
+        opacity: 0.6;
+        pointer-events: none;
+      }
+      .card__title {
+        margin-bottom: auto;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        color: $color_marker_indicator;
+        pointer-events: none;
+      }
+      .card__descr {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 22px;
+        color: $color_marker_indicator;
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+.my-swiper__slide.active .card{
+  border: 1px solid $color_slide_active;
+}
+/* ------------------------------ */
+
+/* MEDIA */
+@media (max-width: 560px) {
+
+  .top-content {
+    justify-content: center;
+    .title-h1 {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+  .top-content .navbar-container {
+    justify-content: center;
+    .navbar__indicator {
+      margin-bottom: 10px;
+    }
+  }
+}
